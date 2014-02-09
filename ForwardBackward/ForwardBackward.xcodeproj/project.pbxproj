@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A03B4FA189EAD66007E5704 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A03B4F9189EAD66007E5704 /* UIImage+Resize.m */; };
+		6A21566C18A7D9C500625D4A /* UIImage+Stitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A21566B18A7D9C500625D4A /* UIImage+Stitch.m */; };
 		6A557C0F18A7B6560070CC92 /* CameraHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A557C0E18A7B6560070CC92 /* CameraHandler.m */; };
 		6A6CFEB7189B0274004CA07A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6CFEB6189B0274004CA07A /* Images.xcassets */; };
 		6A8FF7C0189DC2DA0030AE4E /* AssetManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FF7BF189DC2DA0030AE4E /* AssetManagement.m */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		6A03B4F8189EAD66007E5704 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		6A03B4F9189EAD66007E5704 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		6A21566A18A7D9C500625D4A /* UIImage+Stitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stitch.h"; sourceTree = "<group>"; };
+		6A21566B18A7D9C500625D4A /* UIImage+Stitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stitch.m"; sourceTree = "<group>"; };
 		6A557C0D18A7B6560070CC92 /* CameraHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraHandler.h; sourceTree = "<group>"; };
 		6A557C0E18A7B6560070CC92 /* CameraHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraHandler.m; sourceTree = "<group>"; };
 		6A6CFEB6189B0274004CA07A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6A03B4FB189EAD69007E5704 /* UIImage+Resize */,
+				6A21566D18A7D9CC00625D4A /* UIImage+Stitch */,
 				6AD1A5B01897245400641938 /* ALAssetsLibrary+CustomPhotoAlbum */,
 			);
 			name = "Third Party";
@@ -113,6 +117,15 @@
 				6A03B4F9189EAD66007E5704 /* UIImage+Resize.m */,
 			);
 			name = "UIImage+Resize";
+			sourceTree = "<group>";
+		};
+		6A21566D18A7D9CC00625D4A /* UIImage+Stitch */ = {
+			isa = PBXGroup;
+			children = (
+				6A21566A18A7D9C500625D4A /* UIImage+Stitch.h */,
+				6A21566B18A7D9C500625D4A /* UIImage+Stitch.m */,
+			);
+			name = "UIImage+Stitch";
 			sourceTree = "<group>";
 		};
 		6A8FF7C1189DC2E10030AE4E /* Models */ = {
@@ -323,6 +336,7 @@
 				6AF564C018970E2600824DAF /* AppDelegate.m in Sources */,
 				6AF564BC18970E2600824DAF /* main.m in Sources */,
 				6A8FF7C0189DC2DA0030AE4E /* AssetManagement.m in Sources */,
+				6A21566C18A7D9C500625D4A /* UIImage+Stitch.m in Sources */,
 				6A03B4FA189EAD66007E5704 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

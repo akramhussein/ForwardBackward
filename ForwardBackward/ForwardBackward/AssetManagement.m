@@ -10,6 +10,7 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "UIImage+Stitch.h"
 
 @interface AssetManagement ()
 
@@ -46,27 +47,10 @@
     return [self stitchedImage];
 }
 
-// Stitch with UIKit - not be thread safe must be run in main thread
-- (UIImage *)stitchImage:(UIImage *)firstImage withImage:(UIImage *) secondImage
-{
-    CGSize size = CGSizeMake(firstImage.size.width, firstImage.size.height + secondImage.size.height);
-    
-    UIGraphicsBeginImageContext(size);
-    
-    [firstImage drawInRect:CGRectMake(0, 0, size.width, firstImage.size.height)];
-    [secondImage drawInRect:CGRectMake(0, firstImage.size.height, size.width, secondImage.size.height)];
-    
-    UIImage *stitchedImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-
-    return stitchedImage;
-}
 
 - (void)createStitchedImage
 {
-    [self setStitchedImage:[self stitchImage:[self forwardImage] withImage:[self backwardImage]]];
+    [self setStitchedImage:[forwardImage stitchImagewithImage:[self backwardImage]]];
 }
 
 - (void)saveStitchedImage

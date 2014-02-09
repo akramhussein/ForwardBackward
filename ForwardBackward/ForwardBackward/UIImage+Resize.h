@@ -13,5 +13,4 @@
                     interpolationQuality:(CGInterpolationQuality)quality;
 - (UIImage*)cropAndResizeAspectFillWithSize:(CGSize)targetSize
                        interpolationQuality:(CGInterpolationQuality)quality;
-
 @end
