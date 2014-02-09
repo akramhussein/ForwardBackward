@@ -23,11 +23,13 @@ __Thanks__
 * [UIImage+Resize category](http://vocaro.com/trevor/blog/2009/10/12/resize-a-uiimage-the-right-way/)
 * [ALAssetsLibrary+CustomPhotoAlbum category](https://github.com/Kjuly/ALAssetsLibrary-CustomPhotoAlbum)
 
+__Requirements__
+
+* ≥ iOS 7
+
 __Notes__
 
 I wrote this app after work over 2 evenings. I haven't been able to thoroughly debug it so there may be bugs/memory leaks/odd quirks! 
-
->= iOS 7
 
 __Known bugs__
 
