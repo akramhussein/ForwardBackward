@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mfG-83-Etu"/>
+                        <viewControllerLayoutGuide type="bottom" id="tk9-Vh-TRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="top" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFy-nB-pMv" userLabel="ForwardCameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yiB-IX-Tu2" appends="YES" id="HPr-uO-tD0"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="bottom" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2W5-zv-apk" userLabel="BackwardCameraView">
+                                <rect key="frame" x="0.0" y="240" width="320" height="240"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rX4-Qx-2VI" appends="YES" id="A7k-Rg-SOv"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAY-rc-XwF" userLabel="cameraButton">
+                                <rect key="frame" x="127" y="207" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="cameraButton"/>
+                                <state key="selected" backgroundImage="cameraButtonInverted"/>
+                                <state key="highlighted" backgroundImage="cameraButtonInverted"/>
+                                <connections>
+                                    <action selector="captureButtonPressed:" destination="vXZ-lx-hvc" eventType="touchDown" id="lSF-Iq-H2V"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-8y-klB" userLabel="forwardButton">
+                                <rect key="frame" x="127" y="207" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="forwardButton"/>
+                                <state key="selected" backgroundImage="forwardButtonInverted"/>
+                                <state key="highlighted" backgroundImage="forwardButtonInverted"/>
+                                <connections>
+                                    <action selector="captureButtonPressed:" destination="vXZ-lx-hvc" eventType="touchDown" id="IFv-HJ-KuL"/>
+                                    <action selector="forwardButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xng-oe-syd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvq-H7-gUM" userLabel="flashButton">
+                                <rect key="frame" x="268" y="8" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="flashButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="flashButtonInverted"/>
+                                <state key="highlighted" backgroundImage="flashButtonInverted"/>
+                                <connections>
+                                    <action selector="flashButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oX7-xt-UVR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgc-O3-T8l" userLabel="cancelButton">
+                                <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="cancelButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="cancelButtonInverted"/>
+                                <state key="highlighted" backgroundImage="cancelButtonInverted"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K50-3G-tP2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Wyx-8y-klB" secondAttribute="centerY" id="10j-7L-x3n"/>
+                            <constraint firstAttribute="centerY" secondItem="UAY-rc-XwF" secondAttribute="centerY" id="KV8-1d-0qC"/>
+                            <constraint firstAttribute="centerX" secondItem="Wyx-8y-klB" secondAttribute="centerX" id="OT0-m2-ip4"/>
+                            <constraint firstAttribute="centerX" secondItem="UAY-rc-XwF" secondAttribute="centerX" id="XgO-dM-Ujo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCameraView" destination="2W5-zv-apk" id="5g6-NM-3xe"/>
+                        <outlet property="cancelButton" destination="qgc-O3-T8l" id="UH3-XA-2xu"/>
+                        <outlet property="captureButton" destination="UAY-rc-XwF" id="hZx-wy-KJb"/>
+                        <outlet property="flashButton" destination="Lvq-H7-gUM" id="mOE-V0-gwQ"/>
+                        <outlet property="forwardButton" destination="Wyx-8y-klB" id="qfe-G6-Dei"/>
+                        <outlet property="topCameraView" destination="CFy-nB-pMv" id="ciB-TK-zJR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yiB-IX-Tu2" userLabel="Tap Gesture Recognizer - Forward">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="vXZ-lx-hvc" id="RCC-b1-otg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rX4-Qx-2VI" userLabel="Tap Gesture Recognizer - Backward">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="vXZ-lx-hvc" id="6fl-P8-QTU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cameraButton" width="66" height="66"/>
+        <image name="cameraButtonInverted" width="66" height="66"/>
+        <image name="cancelButton" width="44" height="44"/>
+        <image name="cancelButtonInverted" width="44" height="44"/>
+        <image name="flashButton" width="44" height="44"/>
+        <image name="flashButtonInverted" width="44" height="44"/>
+        <image name="forwardButton" width="66" height="66"/>
+        <image name="forwardButtonInverted" width="66" height="66"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
