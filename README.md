@@ -7,7 +7,9 @@ ForwardBackward is a self contained app that doesn't require any setup. Just tak
 
 I wrote this app to effectively pluck out the cool feature they had built without needing to set up another social network account. As there was no intention to ever ship this, there are a few quirks that need to be resolved...see below!
 
-All assets were hand-rolled using Sketch.
+All assets were hand-rolled using [Sketch](http://www.bohemiancoding.com/sketch/).
+
+![Screenshots](https://github.com/akramhussein/ForwardBackward/blob/master/Assets/screenshots.png?raw=true)
 
 __Features included:__
 
